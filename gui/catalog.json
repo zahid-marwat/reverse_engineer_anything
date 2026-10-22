@@ -1,0 +1,614 @@
+[
+  {
+    "name": "inspect-packet-fields",
+    "category": "Network & Hardware"
+  },
+  {
+    "name": "inspect-packet-capture",
+    "category": "Network & Hardware"
+  },
+  {
+    "name": "inspect-signal-decoders",
+    "category": "Network & Hardware"
+  },
+  {
+    "name": "decode-signal-recording",
+    "category": "Network & Hardware"
+  },
+  {
+    "name": "compare-wasm-interfaces",
+    "category": "Artifacts & Firmware"
+  },
+  {
+    "name": "inspect-wasm-artifact",
+    "category": "Artifacts & Firmware"
+  },
+  {
+    "name": "inspect-sqlite-database",
+    "category": "Artifacts & Firmware"
+  },
+  {
+    "name": "inspect-evm-interface",
+    "category": "Artifacts & Firmware"
+  },
+  {
+    "name": "inspect-web-network-capture",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "observe-web-execution",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "inspect-web-event-listeners",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "trace-web-source-location",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "trace-web-module-imports",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "analyze",
+    "category": "General"
+  },
+  {
+    "name": "inspect",
+    "category": "General"
+  },
+  {
+    "name": "decompile",
+    "category": "General"
+  },
+  {
+    "name": "setup",
+    "category": "General"
+  },
+  {
+    "name": "doctor",
+    "category": "General"
+  },
+  {
+    "name": "uninstall",
+    "category": "General"
+  },
+  {
+    "name": "update",
+    "category": "General"
+  },
+  {
+    "name": "xrefs",
+    "category": "General"
+  },
+  {
+    "name": "trace",
+    "category": "General"
+  },
+  {
+    "name": "trace-native-ui-action",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-native-dispatch-metadata",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "capabilities",
+    "category": "General"
+  },
+  {
+    "name": "providers",
+    "category": "General"
+  },
+  {
+    "name": "function",
+    "category": "General"
+  },
+  {
+    "name": "annotate-native-function",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-native-api",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "instructions",
+    "category": "General"
+  },
+  {
+    "name": "search",
+    "category": "General"
+  },
+  {
+    "name": "import-reference-source",
+    "category": "General"
+  },
+  {
+    "name": "inspect-artifact",
+    "category": "General"
+  },
+  {
+    "name": "extract-artifact",
+    "category": "General"
+  },
+  {
+    "name": "decode-interface-builder",
+    "category": "General"
+  },
+  {
+    "name": "inspect-keyed-archive",
+    "category": "General"
+  },
+  {
+    "name": "trace-dylib-resolution",
+    "category": "General"
+  },
+  {
+    "name": "inspect-native-data-type",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-native-load-image",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "read-bytes",
+    "category": "General"
+  },
+  {
+    "name": "search-bytes",
+    "category": "General"
+  },
+  {
+    "name": "address-to-file-offset",
+    "category": "General"
+  },
+  {
+    "name": "trace-native-values",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-native-instruction",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "resolve-native-call-targets",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-asset-catalog",
+    "category": "General"
+  },
+  {
+    "name": "inspect-managed-artifact",
+    "category": "Managed (.NET)"
+  },
+  {
+    "name": "inspect-recorded-crash",
+    "category": "General"
+  },
+  {
+    "name": "inspect-binary-layout",
+    "category": "General"
+  },
+  {
+    "name": "list-cutter-sessions",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "cutter-command",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-with-objdump",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "list-objdump-architectures",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "execute-rizin-command",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "debug-with-gdb",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "debug-with-rizin",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-go-binary",
+    "category": "General"
+  },
+  {
+    "name": "inspect-rust-binary",
+    "category": "General"
+  },
+  {
+    "name": "inspect-pe-resources",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-analysis-view",
+    "category": "General"
+  },
+  {
+    "name": "list-frida-devices",
+    "category": "Dynamic Instrumentation (Frida)"
+  },
+  {
+    "name": "list-frida-processes",
+    "category": "Dynamic Instrumentation (Frida)"
+  },
+  {
+    "name": "instrument-with-frida",
+    "category": "Dynamic Instrumentation (Frida)"
+  },
+  {
+    "name": "inspect-evidence-bundle",
+    "category": "General"
+  },
+  {
+    "name": "inspect-firmware-regions",
+    "category": "Artifacts & Firmware"
+  },
+  {
+    "name": "extract-firmware",
+    "category": "Artifacts & Firmware"
+  },
+  {
+    "name": "inspect-android-package",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-pcap-client",
+    "category": "Network & Hardware"
+  },
+  {
+    "name": "inspect-pcap-capture",
+    "category": "Network & Hardware"
+  },
+  {
+    "name": "identify-flutter-build",
+    "category": "General"
+  },
+  {
+    "name": "inspect-dart-aot",
+    "category": "General"
+  },
+  {
+    "name": "inspect-apktool-client",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "decode-android-resources",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-adb-client",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "list-adb-devices",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-adb-device",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "list-adb-packages",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "pull-adb-package",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "read-adb-logcat",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-adb-package",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "pull-adb-file",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "push-adb-file",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "capture-adb-screen",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "list-adb-processes",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "list-adb-directory",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "list-adb-features",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "list-adb-services",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-adb-display",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-adb-window",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "read-adb-setting",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "collect-adb-bugreport",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "resolve-adb-packages",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "install-adb-package",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "uninstall-adb-package",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "start-adb-app",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "start-adb-activity",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "stop-adb-app",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "search-android-classes",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-android-class",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-android-method",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "trace-android-references",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "inspect-jeb-client",
+    "category": "General"
+  },
+  {
+    "name": "open-jeb-project",
+    "category": "General"
+  },
+  {
+    "name": "list-jeb-units",
+    "category": "General"
+  },
+  {
+    "name": "decompile-jeb-item",
+    "category": "General"
+  },
+  {
+    "name": "inspect-managed-members",
+    "category": "Managed (.NET)"
+  },
+  {
+    "name": "inspect-managed-native-boundaries",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "compare-managed-members",
+    "category": "Managed (.NET)"
+  },
+  {
+    "name": "verify-managed-native-boundaries",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "import-managed-reconstruction",
+    "category": "Managed (.NET)"
+  },
+  {
+    "name": "project-managed-application-graph",
+    "category": "Managed (.NET)"
+  },
+  {
+    "name": "observe-native-ui",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "observe-native-calls",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "capture-native-ui-scenario",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-macho",
+    "category": "Native Binaries"
+  },
+  {
+    "name": "inspect-signature",
+    "category": "General"
+  },
+  {
+    "name": "list-architectures",
+    "category": "General"
+  },
+  {
+    "name": "inspect-plist",
+    "category": "General"
+  },
+  {
+    "name": "demangle-swift",
+    "category": "General"
+  },
+  {
+    "name": "evidence-import",
+    "category": "General"
+  },
+  {
+    "name": "evidence-export",
+    "category": "General"
+  },
+  {
+    "name": "compare",
+    "category": "General"
+  },
+  {
+    "name": "capture-process",
+    "category": "General"
+  },
+  {
+    "name": "compare-process-captures",
+    "category": "General"
+  },
+  {
+    "name": "list-browser-targets",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "inspect-web-page",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "analyze-web-bundle",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "export-web-scripts",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "recover-javascript-sources",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "observe-web-session",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "discover-webmcp-tools",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "compare-web-captures",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "capture-web-screenshot",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "compare-web-screenshots",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "capture-browser-scenario",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "list-electron-targets",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "inspect-electron-page",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "inspect-electron-fuses",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "capture-electron-scenario",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "list-javascript-runtime-targets",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "observe-javascript-runtime",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "analyze-javascript-application",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "reconcile-javascript-runtime",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "trace-application-feature",
+    "category": "General"
+  },
+  {
+    "name": "trace-javascript-semantics",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "compare-application-versions",
+    "category": "General"
+  },
+  {
+    "name": "compare-source-to-bundle",
+    "category": "General"
+  },
+  {
+    "name": "compare-javascript-export-shapes",
+    "category": "Web & JavaScript / Electron"
+  },
+  {
+    "name": "build-reconstruction-obligation-ledger",
+    "category": "General"
+  },
+  {
+    "name": "evaluate-reconstruction-coverage",
+    "category": "General"
+  },
+  {
+    "name": "project-android-application-graph",
+    "category": "Android & Mobile"
+  },
+  {
+    "name": "project-apple-application-graph",
+    "category": "General"
+  },
+  {
+    "name": "project-harmony-application-graph",
+    "category": "General"
+  }
+]

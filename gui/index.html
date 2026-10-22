@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REA Studio - Reverse Engineer Anything</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <div class="logo-group">
+      <div class="brand-badge">REA</div>
+      <div>
+        <div class="brand-title">Reverse Engineer Anything</div>
+        <div class="brand-sub">Visual Studio for Binaries, Apps & Runtime</div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span id="runtimeStatus">Engine Ready</span>
+      </div>
+      <button class="btn-secondary" id="btnDoctor">Run Diagnostics</button>
+      <button class="btn-secondary" id="btnHelp">Help & Commands</button>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <!-- Left Sidebar: Command Explorer with Search and Categories -->
+    <aside class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" id="commandSearch" class="search-box" placeholder="Search 150+ reverse tools...">
+        <div class="category-filter" id="categoryChips">
+          <span class="filter-chip active" data-cat="ALL">All (153)</span>
+          <span class="filter-chip" data-cat="Managed (.NET)">.NET / Unity (C#)</span>
+          <span class="filter-chip" data-cat="Web & JavaScript / Electron">JS / Electron</span>
+          <span class="filter-chip" data-cat="Android & Mobile">Android</span>
+          <span class="filter-chip" data-cat="Native Binaries">Native Binaries</span>
+          <span class="filter-chip" data-cat="Artifacts & Firmware">Firmware / WASM</span>
+          <span class="filter-chip" data-cat="Network & Hardware">Network & Signals</span>
+          <span class="filter-chip" data-cat="Dynamic Instrumentation (Frida)">Frida</span>
+          <span class="filter-chip" data-cat="General">General</span>
+        </div>
+      </div>
+      <div class="command-list" id="commandList">
+        <!-- Rendered dynamically -->
+      </div>
+    </aside>
+
+    <!-- Main Workspace Stage -->
+    <main class="main-stage">
+      
+      <!-- Quick Action Cards for No-Code Users -->
+      <section class="quick-cards">
+        <div class="quick-card" data-cmd="inspect-managed-artifact">
+          <div class="quick-card-icon">🎮</div>
+          <div class="quick-card-title">Inspect Unity / .NET DLL</div>
+          <div class="quick-card-desc">Inspect game assemblies (Assembly-CSharp.dll), classes, methods, and types.</div>
+        </div>
+
+        <div class="quick-card" data-cmd="analyze-javascript-application">
+          <div class="quick-card-icon">⚡</div>
+          <div class="quick-card-title">Analyze App / ASAR</div>
+          <div class="quick-card-desc">Inspect Electron or JavaScript desktop applications, ASAR packages, or folders.</div>
+        </div>
+
+        <div class="quick-card" data-cmd="inspect-android-package">
+          <div class="quick-card-icon">📱</div>
+          <div class="quick-card-title">Inspect Android APK</div>
+          <div class="quick-card-desc">Extract manifest, permissions, exported activities, and certificates from an APK.</div>
+        </div>
+
+        <div class="quick-card" data-cmd="inspect-web-network-capture">
+          <div class="quick-card-icon">🌐</div>
+          <div class="quick-card-title">Inspect Traffic / HAR</div>
+          <div class="quick-card-desc">Analyze HTTP archives, requests, cookies, and tokens without fetching URLs.</div>
+        </div>
+      </section>
+
+      <!-- Active Command Form Panel -->
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title" id="activeCommandTitle">inspect-managed-artifact</div>
+            <div class="panel-desc" id="activeCommandDesc">Inspect .NET / Unity game assembly metadata, types, and method tokens.</div>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button class="btn-secondary" id="btnBrowseTarget">📁 Browse System Files</button>
+            <button class="btn-primary" id="btnExecute">
+              <span>▶</span> Run Analysis
+            </button>
+          </div>
+        </div>
+
+        <!-- Drag & Drop Zone for Files/Directories -->
+        <div class="dropzone" id="dropzone">
+          <div class="dropzone-icon">📁</div>
+          <div class="dropzone-label">Drop target file, folder, APK, or binary here</div>
+          <div class="dropzone-hint">Or click 'Browse System Files' above to navigate drives and select directly</div>
+        </div>
+
+        <!-- Dynamic Form Fields for Command Parameters -->
+        <div class="form-grid" id="formInputs">
+          <!-- Populated based on selected command -->
+        </div>
+      </section>
+
+      <!-- Execution Console / Results View -->
+      <section class="console-panel">
+        <div class="console-header">
+          <div class="console-title">
+            <span>Console Output</span>
+            <span class="console-badge" id="executionBadge">Ready</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn-primary" id="btnSaveResult" style="padding:4px 12px; font-size:11px;">💾 Save Findings</button>
+            <button class="btn-secondary" id="btnCopyResult" style="padding:4px 8px; font-size:11px;">Copy Output</button>
+            <button class="btn-secondary" id="btnClearConsole" style="padding:4px 8px; font-size:11px;">Clear</button>
+          </div>
+        </div>
+        <pre class="console-body" id="consoleOutput">// Ready. Select a command on the left or drop an app to begin analysis.</pre>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Built-in File Browser Modal -->
+  <div id="fileModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div style="font-weight:600; font-size:15px;" id="modalCurrentPath">C:\</div>
+        <button class="btn-secondary" id="btnCloseModal" style="padding:4px 8px;">✕</button>
+      </div>
+      <div class="modal-body" id="modalFileList">
+        <!-- Populated via /api/browse -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
